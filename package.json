@@ -1,0 +1,27 @@
+{
+  "name": "link-gatherer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spacewoox/link-gatherer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spacewoox/link-gatherer/issues"
+  },
+  "homepage": "https://github.com/spacewoox/link-gatherer#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1"
+  },
+  "dependencies": {
+    "node-fetch": "^1.7.2"
+  }
+}
