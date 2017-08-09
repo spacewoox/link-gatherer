@@ -65,10 +65,13 @@ class DataCollector {
     return this._load_(this._build_url_());
   }
 
-  paginate(fn) {
+  paginate(fn, untilPageN) {
+    untilPageN -= 1;
     this._load_until_((response) => {
-      //return response['MovieList'].length == 0; 
-      return this.variables.page.value > 2;
+      if (untilPageN) {
+        return this.variables.page.value > untilPageN;
+      }
+      return response['MovieList'].length == 0; 
     }, () => {
       this.setVariable('page', Number(this.getVariable('page') + 1));
     }).then(() => {

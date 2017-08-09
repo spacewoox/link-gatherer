@@ -9,6 +9,13 @@ dataCollectorInstance
 
 dataCollectorInstance.paginate((current) => {
   current['MovieList'].forEach((movie) => {
-    console.log(movie.title);
+    const link_detail = movie['items'];
+    const magnet = link_detail.length ? link_detail[0].torrent_magnet : null;
+    if (magnet) {
+      //console.log(`${movie.title} : ${magnet}`);
+    }
+    else {
+      console.log(`${movie.title} : ${movie.items.length}`);
+    }
   });
-});
+}, 2);
