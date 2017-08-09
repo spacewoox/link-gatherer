@@ -1,6 +1,6 @@
 import fetch from 'node-fetch';
 
-class DataCollector {
+export default class DataCollector {
   constructor() {
     this.baseUrl = 'https://api.apidomain.info/list';
     this.variables = {
@@ -81,5 +81,3 @@ class DataCollector {
     });
   }
 }
-
-module.exports = DataCollector;
